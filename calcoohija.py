@@ -3,6 +3,7 @@
 
 import sys
 
+
 class Calculadora():
 
     def plus(self, op1, op2):
@@ -12,6 +13,7 @@ class Calculadora():
     def minus(self, op1, op2):
         """ Function to substract the operands """
         return op1 - op2
+
 
 class CalculadoraHija(Calculadora):
 
@@ -23,14 +25,14 @@ class CalculadoraHija(Calculadora):
 
 if __name__ == "__main__":
     calculadora = CalculadoraHija()
-    
+
     if len(sys.argv) != 4:
         sys.exit("Úsalo así: Python3 calculadora.py numero1 operador numero2")
-	
-    diccOperador = {'suma': calculadora.plus, 'resta': calculadora.minus, 
-                    'multiplica': calculadora.multiplica, 
+
+    diccOperador = {'suma': calculadora.plus, 'resta': calculadora.minus,
+                    'multiplica': calculadora.multiplica,
                     'divide': calculadora.divide}
-    
+
     operador = sys.argv[2]
     try:
         operando1 = int(sys.argv[1])

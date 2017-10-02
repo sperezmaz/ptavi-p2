@@ -3,6 +3,7 @@
 
 import sys
 
+
 class Calculadora():
 
     def plus(self, op1, op2):
@@ -18,16 +19,16 @@ if __name__ == "__main__":
 
     if len(sys.argv) != 4:
         sys.exit("Úsalo así: Python3 calculadora.py numero1 operador numero2")
-    
+
     diccOperador = {'suma': calculadora.plus, 'resta': calculadora.minus}
-    
+
     operador = sys.argv[2]
+
     try:
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])
     except ValueError:
         sys.exit("Error: Non numerical parameters")
-
 
     try:
         result = diccOperador[operador](operando1, operando2)
